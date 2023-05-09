@@ -1,0 +1,234 @@
+[
+  {
+    "id": 0,
+    "name": "Humus",
+    "URL": "images/Humus.jpg",
+    "ingredients": ["chickpeas", "sesame paste (tahini)","garlic","olive oil in most traditional versions"],
+    "package" : ["Aladin"],
+    "category" : "Dips"
+  },
+  {
+    "id": 1,
+    "name": "Pink Humus",
+    "URL": "images/Pink-Humus.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Dips"
+  },
+  {
+    "id": 2,
+    "name": "Muhamara",
+    "URL": "images/Muhamara.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Dips"
+  },
+  {
+    "id": 3,
+    "name": "Mutabal",
+    "URL": "images/Mutabal.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Dips"
+  },
+  {
+    "id": 4,
+    "name": "Fatoush",
+    "URL": "images/Fatoush.jpg",
+    "ingredients": ["Mediterranean fried bread", "lettuce","tomatoes","cucumbers","radishe","fried pieces of pita bread"],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 5,
+    "name": "Tabuleh",
+    "URL": "images/Tabuleh.jpg",
+    "ingredients": ["parsley","tomatoes","bulgur","wheat","green onions"],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 6,
+    "name": "Fasuliye",
+    "URL": "images/Fasuliye.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 7,
+    "name": "Auberginen",
+    "URL": "images/Auberginen.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 8,
+    "name": "Linsen",
+    "URL": "images/Linsen.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 9,
+    "name": "Bulgur",
+    "URL": "images/Bulgur.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 10,
+    "name": "Baba Ganush",
+    "URL": "images/Baba-Ganush.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Salate"
+  },
+  {
+    "id": 11,
+    "name": "Fatayer Käse",
+    "URL": "images/Fatayer-Kaese.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 12,
+    "name": "Fatayer Hackfleisch",
+    "URL": "images/Fatayer-Hackfleisch.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 13,
+    "name": "Fatayer Oregano",
+    "URL": "images/Fatayer-Oregano.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 14,
+    "name": "Fatayer Paprika",
+    "URL": "images/Fatayer-Paprika.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 15,
+    "name": "Sambusak Hackfleisch",
+    "URL": "images/Sambusak-Hackfleisch.jpg",
+    "ingredients": ["fried spiced ground beef", "onions","pine nuts"],
+    "package" : ["Aladin","1001 Nacht"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 16,
+    "name": "Sambusak Spinat",
+    "URL": "images/Sambusak-Spinat.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 17,
+    "name": "Pizza",
+    "URL": "images/Pizza.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 18,
+    "name": "Kibbeh",
+    "URL": "images/Kibbeh.jpg",
+    "ingredients": ["Deep fried veggie balls"],
+    "package" : ["1001 Nacht"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 19,
+    "name": "Mozarella Stick",
+    "URL": "images/Mozarella-Stick.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 20,
+    "name": "Musakhan",
+    "URL": "images/Musakhan.jpg",
+    "ingredients": [],
+    "package" : ["Aladin","1001 Nacht"],
+    "category" : "Teigwaren"
+  },
+  {
+    "id": 21,
+    "name": "Yalangi Weinblätter",
+    "URL": "images/Yalangi.jpg",
+    "ingredients": ["Weinblätter"],
+    "package" : ["Aladin","1001 Nacht","Sahara"],
+    "category" : "Extra"
+  },
+  {
+    "id": 22,
+    "name": "Kibeh Nayeh",
+    "URL": "images/Kibeh-Nayeh.jpg",
+    "ingredients": [],
+    "package" : ["1001 Nacht","Sahara"],
+    "category" : "Extra"
+  },
+  {
+    "id": 23,
+    "name": "Milchreis mit Orangen Pudding",
+    "URL": "images/Milchreis-mit-Orangen-Pudding.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Dessert"
+  },
+  {
+    "id": 24,
+    "name": "Griess und Mascarpone Rolle",
+    "URL": "images/Griess-und-Mascarpone-Rolle.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Dessert"
+  },
+  {
+    "id": 25,
+    "name": "Mini Pancake mit Macarpone und Pistazien",
+    "URL": "images/Mini-Pancake-mit-Macarpone-und-Pistazien.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Dessert"
+  },
+  {
+    "id": 26,
+    "name": "Sandwich Platte",
+    "URL": "images/Sandwich-Platte.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Extraplatte"
+  },
+  {
+    "id": 27,
+    "name": "Vegatarische Sandwich Platte",
+    "URL": "images/Sandwich-Platte-vegetarisch.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Extraplatte"
+  },
+  {
+    "id": 28,
+    "name": "Käse Platte mit Obst und Nüssen",
+    "URL": "images/Kaese-Obst-Platte.jpg",
+    "ingredients": [],
+    "package" : ["Optional"],
+    "category" : "Extraplatte"
+  }
+]
