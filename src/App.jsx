@@ -16,8 +16,7 @@ function App() {
 
   // get object of picked dish id and toggle UseState of modal show/no-show
   const Details = (dishInfo) => {
-    // console.log(dishInfo);
-
+    
     // transfer object into useState to display details
     setDetailInfo(dishInfo);
     // console.log(detailInfo);
