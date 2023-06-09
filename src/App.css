@@ -11,17 +11,20 @@
   /* border: 1px solid red; */
 }
 .card_area {
+  display: flex;
+  flex-wrap: wrap;
   border: 2px solid black;
   /* width: 30vw; */
   height: 100vh;
   border: 1px solid black;
   overflow: hidden;
   overflow-y: scroll;
+  padding: 1rem;
 }
 
 .card_container {
   position: relative;
-  margin: 2rem;
+  margin: 1rem;
   aspect-ratio: 1 / 1;
   width: 7rem;
   height: 7rem;
@@ -53,5 +56,10 @@
   padding: 1rem;
 }
 .detail_image {
-  width: 10rem;
+  width: 15rem;
 }
+.detail_area button{
+  padding: .15rem;
+  margin:.25rem;
+}
+

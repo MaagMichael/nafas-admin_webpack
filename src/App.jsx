@@ -20,34 +20,66 @@ function App() {
     setDetailInfo(dishInfo);
     // console.log(detailInfo);
   };
+  const [buttonText, setButtonText] = useState('Edit Mode');
+
+  const edit_mode = (id) => {
+
+    alert("You want to edit id:" + id);
+    if (buttonText === 'Edit Mode') {
+      setButtonText("Save Mode")
+      // remove read only
+    } else {
+      setButtonText("Edit Mode")
+      // put on readonly
+      // store changes in json file
+    }   
+
+  };
+
+  const delete_mode = (id) => {
+    alert("You want to delete id:" + id);
+  };
+
+  const add_mode = () => {
+    const new_id = Dishes[Dishes.length -1].id +1
+    alert("You want to a new id " + new_id);
+  };
 
   return (
     <div className="App">
       <div className="card_area">
-        <div className="card_box">
-          {Dishes &&
-            Dishes.map((dish) => {
-              return (
-                <div
-                  key={dish.id}
-                  className="card_container"
-                  // take object by id(key) of picked dish and send to modal function
-                  onClick={() => Details(Dishes[dish.id])}
-                >
-                  <img src={dish.URL} className="card_image" alt="dish" />
+        <input type="search" name="" id="" placeholder="Search for..." />
+        {/* <div className="card_box"> */}
 
-                  <div className="card_overlay">{dish.name}</div>
-                </div>
-              );
-            })}
-        </div>
+        {Dishes &&
+          Dishes.map((dish) => {
+            return (
+              <div
+                key={dish.id}
+                className="card_container"
+                // take object by id(key) of picked dish and send to modal function
+                onClick={() => Details(Dishes[dish.id])}
+              >
+                <img src={dish.URL} className="card_image" alt="dish" />
+
+                <div className="card_overlay">{dish.name}</div>
+              </div>
+            );
+          })}
+
+        {/* </div> */}
       </div>
 
       <div class="details">
         {/* <h1>Page for card details ...</h1> */}
-        <Detail detailInfo={detailInfo} />
+        <Detail
+          detailInfo={detailInfo}
+          edit_mode={edit_mode}
+          delete_mode={delete_mode}
+          add_mode={add_mode}
+          buttonText = {buttonText}
+        />
       </div>
-
     </div>
   );
 }
