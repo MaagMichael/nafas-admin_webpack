@@ -7,7 +7,7 @@ import "./App.css";
 import { Detail } from "./components/Detail";
 
 // read in database
-import Dishes from "./data.json";
+import Dishes from "./data_admin.json";
 
 function App() {
   const [detailInfo, setDetailInfo] = useState({});
