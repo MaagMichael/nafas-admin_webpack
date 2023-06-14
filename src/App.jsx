@@ -5,6 +5,7 @@ import "./App.css";
 
 // import pages from components folder
 import { Detail } from "./components/Detail";
+import { DetailAdd } from "./components/DetailAdd";
 
 // read in database
 import Dishes from "./data_admin.json";
@@ -20,20 +21,30 @@ function App() {
     setDetailInfo(dishInfo);
     // console.log(detailInfo);
   };
-  const [buttonText, setButtonText] = useState('Edit Mode');
+  const [buttonText, setButtonText] = useState("Edit Mode");
+  const [editFlag, setEditFlag] = useState(true);
+
+  const [filter, setFilter] = useState("");
+
+
+  const filtering = (e) => {
+    const keyword = e.target.value.toLowerCase();
+    setFilter(keyword);
+    console.log(keyword);
+  }
 
   const edit_mode = (id) => {
-
-    alert("You want to edit id:" + id);
-    if (buttonText === 'Edit Mode') {
-      setButtonText("Save Mode")
+    // alert("You want to edit id:" + id);
+    if (buttonText === "Edit Mode") {
+      setButtonText("Save Mode");
+      setEditFlag(false);
       // remove read only
     } else {
-      setButtonText("Edit Mode")
+      setButtonText("Edit Mode");
+      setEditFlag(true);
       // put on readonly
       // store changes in json file
-    }   
-
+    }
   };
 
   const delete_mode = (id) => {
@@ -41,18 +52,29 @@ function App() {
   };
 
   const add_mode = () => {
-    const new_id = Dishes[Dishes.length -1].id +1
+    const new_id = Dishes[Dishes.length - 1].id + 1;
     alert("You want to a new id " + new_id);
   };
 
   return (
     <div className="App">
       <div className="card_area">
-        <input type="search" name="" id="" placeholder="Search for..." />
+        <input className="searchinput"
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Filter by ...🔎"
+          value={filter}
+          onChange={filtering}
+        />
+        <button onClick={()=> setFilter("")}>Reset</button>
         {/* <div className="card_box"> */}
 
         {Dishes &&
-          Dishes.map((dish) => {
+          Dishes
+          .filter((dish) => dish.name.includes(filter))
+          // .filter((dish) => dish.name.startsWith(filter.toUpperCase()))          
+          .map((dish) => {
             return (
               <div
                 key={dish.id}
@@ -77,8 +99,11 @@ function App() {
           edit_mode={edit_mode}
           delete_mode={delete_mode}
           add_mode={add_mode}
-          buttonText = {buttonText}
+          buttonText={buttonText}
+          editFlag={editFlag}
         />
+
+        <DetailAdd />
       </div>
     </div>
   );

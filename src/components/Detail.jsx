@@ -4,6 +4,7 @@ export function Detail({
   delete_mode,
   add_mode,
   buttonText,
+  editFlag,
 }) {
   return (
     <div className="detail_area">
@@ -51,25 +52,44 @@ export function Detail({
             <button onClick={() => add_mode()}>Add new Dataset</button>
           </div>
           <hr />
-
+{/* ####################################### */}
+{/* https://dev.to/cesareferrari/handling-input-field-updates-in-react-47oe */}
+{/* https://dev.to/cesareferrari/update-state-from-multiple-input-fields-1l7a        */}
           <form action="">
             <label htmlFor="name">Name: </label>
-            <input type="text" name="name" value={detailInfo.name} readonly/>
+            <input
+              type="text"
+              name="name"
+              value={detailInfo.name}
+              readOnly={editFlag}
+            />
             <br />
             <label htmlFor="category">Category: </label>
-            <input type="text" name="category" value={detailInfo.category} readonly/>
+            <input
+              type="text"
+              name="category"
+              value={detailInfo.category}
+              readOnly={true}
+            />
             <br />
             <label htmlFor="package">Package: </label>
-            <input type="text" name="package" value={detailInfo.package} readonly/>
+            <input
+              type="text"
+              name="package"
+              value={detailInfo.package}
+              readOnly={true}
+            />
             <br />
-            <label htmlFor="ingredients">Package: </label>
-            <input type="text" name="ingredients" value={detailInfo.ingredients} readonly/>
+            <label htmlFor="ingredients">Ingredients: </label>
+            <input
+              type="text"
+              name="ingredients"
+              value={detailInfo.ingredients}
+              readOnly={true}
+            />
             <br />
-
-
+            {!editFlag ? (<button type="submit" >Update</button>):null}
           </form>
-
-
         </>
       ) : null}
     </div>
