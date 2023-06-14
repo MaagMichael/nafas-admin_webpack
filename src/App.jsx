@@ -6,6 +6,7 @@ import "./App.css";
 // import pages from components folder
 import { Detail } from "./components/Detail";
 import { DetailAdd } from "./components/DetailAdd";
+import { DetailEdit } from "./components/DetailEdit";
 
 // read in database
 import Dishes from "./data_admin.json";
@@ -23,15 +24,15 @@ function App() {
   };
   const [buttonText, setButtonText] = useState("Edit Mode");
   const [editFlag, setEditFlag] = useState(true);
+  const [addFlag, setAddFlag] = useState(false);
 
   const [filter, setFilter] = useState("");
-
 
   const filtering = (e) => {
     const keyword = e.target.value.toLowerCase();
     setFilter(keyword);
     console.log(keyword);
-  }
+  };
 
   const edit_mode = (id) => {
     // alert("You want to edit id:" + id);
@@ -52,14 +53,16 @@ function App() {
   };
 
   const add_mode = () => {
-    const new_id = Dishes[Dishes.length - 1].id + 1;
-    alert("You want to a new id " + new_id);
+    
   };
 
   return (
     <div className="App">
       <div className="card_area">
-        <input className="searchinput"
+        {!addFlag ? <button onClick={()=>setAddFlag(!addFlag)}>Add new dataset</button> : null}
+
+        <input
+          className="searchinput"
           type="search"
           name="search"
           id="search"
@@ -67,43 +70,48 @@ function App() {
           value={filter}
           onChange={filtering}
         />
-        <button onClick={()=> setFilter("")}>Reset</button>
+        <button onClick={() => setFilter("")}>Reset</button>
         {/* <div className="card_box"> */}
 
         {Dishes &&
-          Dishes
-          .filter((dish) => dish.name.includes(filter))
-          // .filter((dish) => dish.name.startsWith(filter.toUpperCase()))          
-          .map((dish) => {
-            return (
-              <div
-                key={dish.id}
-                className="card_container"
-                // take object by id(key) of picked dish and send to modal function
-                onClick={() => Details(Dishes[dish.id])}
-              >
-                <img src={dish.URL} className="card_image" alt="dish" />
+          Dishes.filter((dish) => dish.name.includes(filter))
+            // .filter((dish) => dish.name.startsWith(filter.toUpperCase()))
+            .map((dish) => {
+              return (
+                <div
+                  key={dish.id}
+                  className="card_container"
+                  // take object by id(key) of picked dish and send to modal function
+                  onClick={() => Details(Dishes[dish.id])}
+                >
+                  <img src={dish.URL} className="card_image" alt="dish" />
 
-                <div className="card_overlay">{dish.name}</div>
-              </div>
-            );
-          })}
+                  <div className="card_overlay">{dish.name}</div>
+                </div>
+              );
+            })}
 
         {/* </div> */}
       </div>
 
       <div class="details">
         {/* <h1>Page for card details ...</h1> */}
-        <Detail
+        {/* <Detail
           detailInfo={detailInfo}
           edit_mode={edit_mode}
           delete_mode={delete_mode}
-          add_mode={add_mode}
           buttonText={buttonText}
           editFlag={editFlag}
-        />
+        /> */}
 
-        <DetailAdd />
+        <DetailAdd
+          Dishes={Dishes}
+          detailInfo={detailInfo}
+          add_mode={add_mode}
+          addFlag={addFlag}
+          setAddFlag={setAddFlag}
+        />
+        <DetailEdit/>
       </div>
     </div>
   );
