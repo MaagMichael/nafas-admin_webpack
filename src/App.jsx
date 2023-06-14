@@ -6,7 +6,6 @@ import "./App.css";
 // import pages from components folder
 // import { Detail } from "./components/Detail";
 import { DetailAdd } from "./components/DetailAdd";
-// import { DetailEdit } from "./components/DetailEdit";
 import { DetailEdit } from "./components/DetailEdit";
 
 // read in database
