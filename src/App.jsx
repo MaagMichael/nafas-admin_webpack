@@ -6,7 +6,9 @@ import "./App.css";
 // import pages from components folder
 // import { Detail } from "./components/Detail";
 import { DetailAdd } from "./components/DetailAdd";
-import { DetailEdit } from "./components/DetailEdit";
+import { DetailEdit } from './components/DetailEdit';
+
+
 
 // read in database
 import Dishes from "./data_admin.json";
@@ -103,13 +105,14 @@ function App() {
           add_mode={add_mode}
           addFlag={addFlag}
           setAddFlag={setAddFlag}
-        />        
+        />   
 
         <DetailEdit
         detailInfo={detailInfo}
+        setDetailInfo={setDetailInfo}
         edit_mode={edit_mode}
         delete_mode={delete_mode}
-        // buttonText={buttonText}
+        buttonText={buttonText}
         editFlag={editFlag}
         />
         
