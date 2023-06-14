@@ -4,8 +4,9 @@ import { useState } from "react";
 import "./App.css";
 
 // import pages from components folder
-import { Detail } from "./components/Detail";
+// import { Detail } from "./components/Detail";
 import { DetailAdd } from "./components/DetailAdd";
+// import { DetailEdit } from "./components/DetailEdit";
 import { DetailEdit } from "./components/DetailEdit";
 
 // read in database
@@ -96,22 +97,24 @@ function App() {
 
       <div class="details">
         {/* <h1>Page for card details ...</h1> */}
-        {/* <Detail
-          detailInfo={detailInfo}
-          edit_mode={edit_mode}
-          delete_mode={delete_mode}
-          buttonText={buttonText}
-          editFlag={editFlag}
-        /> */}
-
+        
         <DetailAdd
           Dishes={Dishes}
           detailInfo={detailInfo}
           add_mode={add_mode}
           addFlag={addFlag}
           setAddFlag={setAddFlag}
+        />        
+
+        <DetailEdit
+        detailInfo={detailInfo}
+        edit_mode={edit_mode}
+        delete_mode={delete_mode}
+        // buttonText={buttonText}
+        editFlag={editFlag}
         />
-        <DetailEdit/>
+        
+        
       </div>
     </div>
   );
